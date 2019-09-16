@@ -1,0 +1,39 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:recommended"
+	],
+	"jsRules": {},
+	"rules": {
+		"align": [
+			true,
+			"arguments",
+			"parameters",
+			"statements"
+		],
+		"arrow-parens": false,
+		"indent": [
+			true,
+			"tabs"
+		],
+		"semicolon": [
+			true,
+			"never"
+		],
+		"trailing-comma": false,
+		"typedef": [
+			true,
+			"call-signature",
+			"parameter",
+			"property-declaration",
+			"member-variable-declaration"
+		],
+		"variable-name": [
+			true,
+			"ban-keywords",
+			"check-format",
+			"allow-leading-underscore"
+		]
+	},
+	"rulesDirectory": []
+}

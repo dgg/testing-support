@@ -1,0 +1,48 @@
+{
+	"name": "testing-support",
+	"version": "0.1.0",
+	"description": "Classes and functions that help testing code in general and more specific areas such as web artifacts.",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "npm run build:ts && npm run build:lint",
+		"build:lint": "npm run lint",
+		"build:ts": "tsc",
+		"pretest": "npm run lint:test",
+		"test": "npm run test:ts && npm run test:js",
+		"test:ts": "mocha test/**/**.spec.ts",
+		"test:js": "mocha test/**/**.spec.js",
+		"test-watch": "npm run test:ts && npm run test:js",
+		"test-watch:ts": "npm run test:ts -- -w --watch-extensions ts",
+		"test-watch:js": "npm run test:js -- -w --watch-extensions js",
+		"lint": "npm run lint:src && npm run lint:test",
+		"lint:src": "tslint -c tslint.json -p tsconfig.json",
+		"lint:test": "tslint -c tslint.test.json -p tsconfig.test.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dgg/testing-support.git"
+	},
+	"keywords": [
+		"testing",
+		"unit testing",
+		"utility",
+		"support",
+		"typescript"
+	],
+	"author": "Daniel González García",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dgg/testing-support/issues"
+	},
+	"homepage": "https://github.com/dgg/testing-support#readme",
+	"devDependencies": {
+		"@types/chai": "4.2.2",
+		"@types/mocha": "5.2.7",
+		"chai": "4.2.0",
+		"mocha": "6.2.0",
+		"source-map-support": "0.5.13",
+		"ts-node": "8.4.1",
+		"tslint": "5.20.0",
+		"typescript": "3.6.3"
+	}
+}
